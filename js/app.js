@@ -76,3 +76,27 @@ timeline.from(".text h1", {
     opacity: 0,
     duration: 1.5,
 }, "3");
+
+window.addEventListener('scroll', function () {
+    // Calculate the scroll position (you may need to adjust this)
+    let scrollPosition = window.scrollY;
+
+    // Select parallax elements by class name and adjust their positions
+    document.querySelectorAll('.background').forEach(function (element) {
+        // Adjust the top or transform properties based on your desired effect
+        // For example, you can use translateY to create a vertical parallax effect
+        element.style.transform = `translateY(-${scrollPosition * 0.008}px)`;
+    });
+});
+
+window.addEventListener('scroll', function () {
+    // Calculate the scroll position (you may need to adjust this)
+    let scrollPosition = window.scrollY;
+
+    // Select parallax elements by class name and adjust their positions
+    document.querySelectorAll('.wrapper').forEach(function (element) {
+        // Adjust the top or transform properties based on your desired effect
+        // For example, you can use translateY to create a vertical parallax effect
+        element.style.transform = `translateY(-${scrollPosition * 0.1}px)`;
+    });
+});
