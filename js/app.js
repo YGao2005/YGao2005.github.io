@@ -1,3 +1,4 @@
+
 const parallax_el = document.querySelectorAll(".parallax");
 const main = document.querySelector("main");
 let xValue = 0, yValue = 0;
@@ -40,7 +41,6 @@ if(window.innerWidth >= 725){
 } else{
     main.style.maxHeight = `${window.innerWidth * 1.6}px`;
 }
-
 
 /* GSAP Animation */
 
@@ -85,7 +85,7 @@ window.addEventListener('scroll', function () {
     document.querySelectorAll('.background').forEach(function (element) {
         // Adjust the top or transform properties based on your desired effect
         // For example, you can use translateY to create a vertical parallax effect
-        element.style.transform = `translateY(-${scrollPosition * 0.008}px)`;
+        element.style.transform = `translateY(${scrollPosition * 0.8}px)`;
     });
 });
 
@@ -97,6 +97,6 @@ window.addEventListener('scroll', function () {
     document.querySelectorAll('.wrapper').forEach(function (element) {
         // Adjust the top or transform properties based on your desired effect
         // For example, you can use translateY to create a vertical parallax effect
-        element.style.transform = `translateY(-${scrollPosition * 0.1}px)`;
+        element.style.transform = `translateY(-${scrollPosition * 0.3}px)`;
     });
 });
