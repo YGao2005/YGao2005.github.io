@@ -329,8 +329,6 @@ main{
   width: 100%;
 }
 
-
-
 @media (max-width: 1100px){
     .text h1{
         font-size: 5.8rem;

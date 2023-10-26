@@ -94,14 +94,3 @@ window.addEventListener('scroll', function () {
         element.style.transform = `translateY(-${scrollPosition * 0.2}px)`;
     });
 });
-
-const textElement = document.querySelector('.transparent-text');
-
-// Set the initial opacity to 0
-textElement.style.opacity = 0;
-
-// Animate the opacity to 1 over the first two seconds
-setTimeout(() => {
-  textElement.style.transition = 'opacity 2s'; // Apply a 2-second transition
-  textElement.style.opacity = 1;
-}, 0);
