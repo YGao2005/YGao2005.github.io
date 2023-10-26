@@ -62,6 +62,7 @@ Array.from(parallax_el)
 
 timeline.from(".text h1", {
     y: window.innerHeight - document.querySelector(".text h1").getBoundingClientRect().top + 200,
+    opacity: 0,
     duration: 2,
     }, 
     "2.5"
@@ -77,6 +78,7 @@ timeline.from(".text h1", {
     duration: 1.5,
 }, "3");
 
+
 window.addEventListener('scroll', function () {
     let scrollPosition = window.scrollY;
     document.querySelectorAll('.background').forEach(function (element) {
@@ -87,14 +89,19 @@ window.addEventListener('scroll', function () {
         element.style.transform = `translateY(${scrollPosition * 0.4}px)`;
     });
 
-    /*
-    BREAKS MY CODE FOR SOME REASON! :DDDDDD
-    document.querySelectorAll('.text').forEach(function (element) {
-        element.style.transform = `translateY(-${scrollPosition * 0.4}px)`;
-    });
-    */
 
-    document.querySelectorAll('.wrapper').forEach(function (element) {
-        element.style.transform = `translateY(-${scrollPosition * 0.3}px)`;
+    document.querySelectorAll('.portfolio-title').forEach(function (element) {
+        element.style.transform = `translateY(-${scrollPosition * 0.2}px)`;
     });
 });
+
+const textElement = document.querySelector('.transparent-text');
+
+// Set the initial opacity to 0
+textElement.style.opacity = 0;
+
+// Animate the opacity to 1 over the first two seconds
+setTimeout(() => {
+  textElement.style.transition = 'opacity 2s'; // Apply a 2-second transition
+  textElement.style.opacity = 1;
+}, 0);
