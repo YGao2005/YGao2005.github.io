@@ -8,6 +8,14 @@
   box-sizing: border-box;
 }
 
+:root{
+  --honeydew: #E4FAEE;
+  --richgreen: #001B1D;
+  --darkgreen: #001517;
+  --richblack: #000B0F;
+  --midnightgreen: #064043; 
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -486,16 +494,21 @@ main {
   width: 100%;
   position: relative;
   min-height: 100vh;
-  background-color: white;
+  background-color: var(--honeydew);
 }
 
 .intro-title {
   top: 30%;
   left: 8%;
   position: absolute;
-  color: black;
+
 }
 
 .intro-title h1 {
   font-size: 8vw;
+  color: var(--richblack);
+}
+
+.intro-title h2{
+  color: var(--richgreen);
 }
