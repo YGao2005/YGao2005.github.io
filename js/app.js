@@ -1,4 +1,5 @@
 
+//functions below update image position based on mouse movement
 const parallax_el = document.querySelectorAll(".parallax");
 const main = document.querySelector("main");
 let xValue = 0, yValue = 0;
